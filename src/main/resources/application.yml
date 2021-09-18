@@ -1,0 +1,31 @@
+server:
+  servlet:
+    context-path: /mock-test
+
+spring:
+  application:
+    name: mock-test
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://eureka.didispace.com/eureka/
+  instance:
+    health-check-url-path: /actuator/health
+    leaseRenewalIntervalInSeconds: 5
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 2000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000

@@ -1,0 +1,1 @@
+这个仓库是https://github.com/markytsai/feign-hystrix-mocker的测试代码
